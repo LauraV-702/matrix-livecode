@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -31,6 +32,9 @@ public class SalamanderSearch {
         coordinateSet.add(coord3);
 
         System.out.println(coordinateSet.size());
+        // canReach(enclosure1);
+        Position pos = new Position(3, 5);
+        System.out.println(pos);
     }
 
     /**
@@ -68,6 +72,8 @@ public class SalamanderSearch {
         //base case
         if(visited[curR][curC]) return false;
         if(enclosure[curR][curC] == 'f') return true;
+
+        System.out.println(Arrays.toString(current));
 
         //marked those visited
         visited[curR][curC] = true;
